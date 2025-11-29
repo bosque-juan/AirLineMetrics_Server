@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineAnalitics_Server.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineAnalitics_Server.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineAnalitics_Server.csproj",
-        "projectName": "AirLineAnalitics_Server",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineAnalitics_Server.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics_Server.csproj",
+        "projectName": "AirLineMetrics_Server",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics_Server.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\obj\\",
         "projectStyle": "PackageReference",

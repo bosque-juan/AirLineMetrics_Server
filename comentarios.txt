@@ -1,0 +1,11 @@
+﻿
+- que un pasajero pueda reservar más de un vuelo
+- que se pueda pagar con varios medios de pagos
+- paginación para mostrar vuelos.
+- filtros de vuelos en el front.
+
+
+puede comprar solo un equipaje y un solo asiento
+por eso no usamos tabla intermedia de relación mucho a muchos
+no rompe la normalizacion poner en detalle vuelos el id_aasiento
+y el id_equipaje
