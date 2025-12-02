@@ -453,9 +453,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics_Server.csproj",
-      "projectName": "AirLineMetrics_Server",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics_Server.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics.WebApi.csproj",
+      "projectName": "AirLineMetrics.WebApi",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\AirLineMetrics.WebApi.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Usuario\\Desktop\\onGit\\AirLineMetrics\\AirLineMetrics_Server\\obj\\",
       "projectStyle": "PackageReference",
