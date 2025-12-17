@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirLineMetrics.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dd58edad4783f01f7d341bd0167afdcce5d7c38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f97c3dff91330255616929ee141e1953554011b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirLineMetrics.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirLineMetrics.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
