@@ -9,6 +9,8 @@ namespace AirLineMetrics.Domain.Models
     public class BaggageType
     {
         public int BaggageTypeId { get; set; }
-        public string BaggageName { get; set; }
+        public string BaggageName { get; set; } = string.Empty;
+
+        public ICollection<Bagagge> Bagagges { get; set; } = new List<Bagagge>();
     }
 }

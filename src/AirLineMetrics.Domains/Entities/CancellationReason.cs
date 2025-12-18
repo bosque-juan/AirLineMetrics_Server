@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace AirLineMetrics.Domain.Models
 {
-    public class CancellationReasson
+    public class CancellationReason
     {
-        public int CancellationReassonId { get; set; }
+        public int CancellationReasonId { get; set; }
         public string CancellationDescription {  get; set; }
+
+        public ICollection<Cancellation> Cancellations { get; set; } = new List<Cancellation>();
     }
 }

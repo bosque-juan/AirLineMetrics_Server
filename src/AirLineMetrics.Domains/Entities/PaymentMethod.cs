@@ -9,6 +9,8 @@ namespace AirLineMetrics.Domain.Models
     public class PaymentMethod
     {
         public int PaymentMethodId { get; set; }
-        public string PaymentMethodName { get; set; }
+        public string PaymentMethodName { get; set; } = string.Empty;
+        public ICollection<Payment> Payments { get; set; } = null!;
+
     }
 }
