@@ -16,7 +16,7 @@ namespace AirLineMetrics.Domain.Models
         public decimal MaintenanceCost { get; set; }
         public decimal CrewCost { get; set; }
         public decimal AirportFees { get; set; }
-
         public DateTime CreatedAt { get; set; }
+        public Flight Flight { get; set; } = null!;
     }
 }

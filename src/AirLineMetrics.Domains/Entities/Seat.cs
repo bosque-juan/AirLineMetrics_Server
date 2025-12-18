@@ -12,6 +12,10 @@ namespace AirLineMetrics.Domain.Models
         public int Number {  get; set; }
         public bool IsBussy { get; set; }
         public int SeatTypeId { get; set; }
+
         public int FlightId { get; set; }
+
+        public SeatType SeatType { get; set; } = null!;
+        public Flight Flight { get; set; } = null!;
     }
 }

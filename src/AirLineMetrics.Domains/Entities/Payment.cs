@@ -9,9 +9,11 @@ namespace AirLineMetrics.Domain.Models
     public class Payment
     {
         public int PaymentId { get; set; }
-
+        public int InvoiceId { get; set; }
         public double PaymentAmount { get; set; }
         public DateTime PaymentDate { get; set; }
         public int PaymentMethodId { get; set; }
+        public Invoice Invoice { get; set; } = null!;
+        public PaymentMethod PaymentMethod { get; set; } = null!;
     }
 }
