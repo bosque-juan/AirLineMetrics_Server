@@ -9,7 +9,7 @@ namespace AirLineMetrics.Domain.Models
     public class State
     {
         public int IdState { get; set; }
-        public string StateName { get; set; }
+        public string StateName { get; set; } = string.Empty;
 
         public int IdCountry { get; set; }
 

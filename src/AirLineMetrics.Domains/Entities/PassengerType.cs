@@ -9,7 +9,9 @@ namespace AirLineMetrics.Domain.Models
     public class PassengerType
     {
         public int PassengerTypeId { get; set; }
-        public string Type { get; set; }
+        public string Type { get; set; } = string.Empty;
+
+        public ICollection<Passenger> Passengers { get; set; } = null!;
 
     }
 }

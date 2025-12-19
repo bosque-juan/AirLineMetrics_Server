@@ -11,5 +11,7 @@ namespace AirLineMetrics.Domain.Models
         public int FlightPromotionId { get; set; }
         public int PromotionId { get; set; }
         public int FlightId { get; set; }
+        public Promotion Promotion { get; set; } = null!;
+        public Flight Flight { get; set; } = null!;
     }
 }

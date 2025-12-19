@@ -11,5 +11,7 @@ namespace AirLineMetrics.Domain.Models
         public int InvoiceDetailId { get; set; }
         public int InvoiceId { get; set; }
         public  int FlightDetailId { get; set; }
+        public Invoice Invoice { get; set; } = null!;
+        public FlightDetail FlightDetail { get; set; } = null!;
     }
 }

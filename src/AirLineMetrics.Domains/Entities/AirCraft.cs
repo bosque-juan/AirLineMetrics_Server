@@ -9,10 +9,8 @@ namespace AirLineMetrics.Domain.Models
     public class AirCraft
     {
         public int AirCraftId { get; set; }
-        public string AirCraftName { get; set; }
+        public string AirCraftName { get; set; } = string.Empty;
         public int PassengerCapacity { get; set; }
-        public bool FlightCancelled { get; set; }
-        public int AirportId { get; set; }
 
     }
 }

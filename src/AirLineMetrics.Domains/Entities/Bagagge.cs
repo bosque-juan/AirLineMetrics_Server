@@ -11,6 +11,7 @@ namespace AirLineMetrics.Domain.Models
         public int BagaggeId { get; set; }
         public decimal Price { get; set; }
         public decimal Weight { get; set; }
-        public int BaggeTypeId { get; set; }
+        public int BaggageTypeId { get; set; }
+        public BaggageType BaggageType { get; set; } = null!;
     }
 }

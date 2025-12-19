@@ -8,8 +8,8 @@ namespace AirLineMetrics.Domain.Models
 {
     public class Country
     {
-        public int CountryId { get; set; }
-        public string Name { get; set; } = string.Empty;
-        //public ICollection<State> States { get; set; } = new List<State>();
+        int CountryId { get; set; }
+        public string Name { get; set; }  = string.Empty;
+        public IEnumerable<State> States { get; set; } = new List<State>();
     }
 }
