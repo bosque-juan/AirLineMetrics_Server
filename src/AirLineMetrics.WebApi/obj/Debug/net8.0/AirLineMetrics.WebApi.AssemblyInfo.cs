@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirLineMetrics.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f97c3dff91330255616929ee141e1953554011b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f0faa4b0755130b73da348f1d664756a4f70da6")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirLineMetrics.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirLineMetrics.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
