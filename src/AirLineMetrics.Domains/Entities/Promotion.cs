@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirLineMetrics.Domain.Models
+namespace AirLineMetrics.Domain.Entities
 {
     public class Promotion
     {
         public int PromotionId { get; set; }
         public string Description { get; set; } = string.Empty;
-        public string PromotionStart { get; set; } = string.Empty;
-        public string PromotionEnd { get; set; }    =   string.Empty;
+        public DateTime PromotionStart { get; set; }
+        public DateTime PromotionEnd { get; set; }
         public double PromotionDiscount { get; set; }
-
-        public ICollection<FlightPromotion> FlightPromotions { get; set; } = null!;
-
+        public ICollection<FlightPromotion> FlightPromotionsNavigation { get; set; } = null!;
 
     }
 }

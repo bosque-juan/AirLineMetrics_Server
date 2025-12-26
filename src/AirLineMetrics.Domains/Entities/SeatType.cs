@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirLineMetrics.Domain.Models
+namespace AirLineMetrics.Domain.Entities
 {
     public class SeatType
     {
@@ -12,7 +12,6 @@ namespace AirLineMetrics.Domain.Models
         public string SeatName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public double AddedSeatTypePrice { get; set; }
-
-        public ICollection<Seat> Seats { get; set; } = null!;
+        public ICollection<SeatReservation> SeatReservationNavigation { get; set; } = new List<SeatReservation>();
     }
 }
