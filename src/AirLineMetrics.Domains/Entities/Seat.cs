@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AirLineMetrics.Domain.Models
 {
-    public class SeatType
+    public class Seat
     {
+        public int SeatId { get; set; }
+        public int Number {  get; set; }
+        public bool IsBussy { get; set; }
         public int SeatTypeId { get; set; }
-        public string SeatName { get; set; }
-        public string Description { get; set; }
-        public double AddedSeatTypePrice { get; set; }
+        public int FlightId { get; set; }
     }
 }

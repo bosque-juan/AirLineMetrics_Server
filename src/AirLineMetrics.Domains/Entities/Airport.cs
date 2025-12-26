@@ -4,17 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirLineMetrics.Domain.Entities
+namespace AirLineMetrics.Domain.Models
 {
     public class Airport
     {
         public int AirportId { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public string AirportName { get; set; }
         public int StateId { get; set; }
-        public State StateNavigation { get; set; } = null!;
-
-        public ICollection<Flight> OriginAirportNavigation { get; set; } = new List<Flight>();
-        public ICollection<Flight> DestinationAirportNavigation { get; set; } = new List<Flight>();
-
+        public State State { get; set; }
     }
 }

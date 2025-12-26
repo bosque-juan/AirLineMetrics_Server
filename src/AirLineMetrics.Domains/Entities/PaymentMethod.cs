@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirLineMetrics.Domain.Entities
+namespace AirLineMetrics.Domain.Models
 {
     public class PaymentMethod
     {
         public int PaymentMethodId { get; set; }
         public string PaymentMethodName { get; set; } = string.Empty;
-        public ICollection<InvoicePayment> InvoicePaymentNavigation { get; set; } = new List<InvoicePayment>();
     }
 }
