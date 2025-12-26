@@ -12,7 +12,6 @@ namespace AirLineMetrics.Domain.Entities
         public decimal Price { get; set; }
         public int InvoiceId { get; set; }
         public int FlightDetailId { get; set; }
-
         public Invoice InvoiceNavigation { get; set; } = null!;
         public FlightDetail FlightDetailNavigation { get; set; } = null!;
         public ICollection<PurchaseCancellation> PurchaseCancellationNavigation { get; set; } = new List<PurchaseCancellation>();

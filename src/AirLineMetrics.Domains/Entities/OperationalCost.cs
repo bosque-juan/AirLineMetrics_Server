@@ -16,5 +16,6 @@ namespace AirLineMetrics.Domain.Entities
         public DateTime OperationalDate { get; set; }
         public int FlightId { get; set; }
         public Flight FlightNavigation { get; set; } = null!;
+
     }
 }

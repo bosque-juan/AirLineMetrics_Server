@@ -12,7 +12,6 @@ namespace AirLineMetrics.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public int StateId { get; set; }
         public State StateNavigation { get; set; } = null!;
-
         public ICollection<Flight> OriginAirportNavigation { get; set; } = new List<Flight>();
         public ICollection<Flight> DestinationAirportNavigation { get; set; } = new List<Flight>();
 

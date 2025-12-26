@@ -12,7 +12,6 @@ namespace AirLineMetrics.Domain.Entities
         public string SeatName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public double AddedSeatTypePrice { get; set; }
-
         public ICollection<SeatReservation> SeatReservationNavigation { get; set; } = new List<SeatReservation>();
     }
 }

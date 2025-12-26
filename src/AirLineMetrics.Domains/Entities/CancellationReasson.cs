@@ -11,5 +11,6 @@ namespace AirLineMetrics.Domain.Entities
         public int CancellationReassonId { get; set; }
         public string Description { get; set; } = string.Empty;
         public ICollection<PurchaseCancellation> PurchaseCancellationNavigation { get; set; } = new List<PurchaseCancellation>();
+
     }
 }

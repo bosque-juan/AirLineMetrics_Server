@@ -14,6 +14,5 @@ namespace AirLineMetrics.Domain.Entities
         public Passenger PassengerNavigation { get; set; } = null!;
         public ICollection<InvoicePayment> InvoicePaymentNavigation { get; set; } = new List<InvoicePayment>();
         public ICollection<InvoiceDetail> InvoiceDetailNavigation { get; set; } = new List<InvoiceDetail>();
-
     }
 }

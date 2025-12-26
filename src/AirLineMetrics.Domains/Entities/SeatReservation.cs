@@ -11,7 +11,6 @@ namespace AirLineMetrics.Domain.Entities
         public int SeatId { get; set; }
         public int Number { get; set; }
         public bool IsBussy { get; set; }
-
         public int SeatTypeId { get; set; }
         public int FlighDetailtId { get; set; }
         public SeatType SeatTypeNavigation { get; set; } = null!;

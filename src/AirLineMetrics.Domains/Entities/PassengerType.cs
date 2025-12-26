@@ -10,7 +10,6 @@ namespace AirLineMetrics.Domain.Entities
     {
         public int PassengerTypeId { get; set; }
         public string Description { get; set; } = string.Empty;
-
         public ICollection<Passenger> PassengerNavigation { get; set; } = null!;
 
     }

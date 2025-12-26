@@ -11,5 +11,6 @@ namespace AirLineMetrics.Domain.Entities
         public int CountryId { get; set; }
         public string Name { get; set; } = string.Empty;
         public ICollection<State> StateNavigation { get; set; } = new List<State>();
+
     }
 }

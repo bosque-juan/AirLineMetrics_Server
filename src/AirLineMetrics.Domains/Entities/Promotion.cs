@@ -13,9 +13,7 @@ namespace AirLineMetrics.Domain.Entities
         public DateTime PromotionStart { get; set; }
         public DateTime PromotionEnd { get; set; }
         public double PromotionDiscount { get; set; }
-
         public ICollection<FlightPromotion> FlightPromotionsNavigation { get; set; } = null!;
-
 
     }
 }

@@ -15,5 +15,6 @@ namespace AirLineMetrics.Domain.Entities
         public int FlightDetailId { get; set; }
         public BaggageType BaggageTypeNavigation { get; set; } = null!;
         public FlightDetail FlightDetailNavigation { get; set; } = null!;
+
     }
 }

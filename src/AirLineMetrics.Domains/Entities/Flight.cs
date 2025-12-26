@@ -15,7 +15,6 @@ namespace AirLineMetrics.Domain.Entities
         public string ActualDeparture { get; set; } = string.Empty;
         public string ActualArrival { get; set; } = string.Empty;
         public bool IsDeleted { get; set; }
-
         public int AirCraftId { get; set; }
         public int OriginAirportId { get; set; }
         public int DestinationAirportId { get; set; }

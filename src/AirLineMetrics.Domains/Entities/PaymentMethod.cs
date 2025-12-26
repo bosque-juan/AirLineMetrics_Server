@@ -11,5 +11,6 @@ namespace AirLineMetrics.Domain.Entities
         public int PaymentMethodId { get; set; }
         public string PaymentMethodName { get; set; } = string.Empty;
         public ICollection<InvoicePayment> InvoicePaymentNavigation { get; set; } = new List<InvoicePayment>();
+
     }
 }

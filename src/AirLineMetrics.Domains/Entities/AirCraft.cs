@@ -11,8 +11,6 @@ namespace AirLineMetrics.Domain.Entities
         public int AirCraftId { get; set; }
         public string AirCraftName { get; set; } = string.Empty;
         public int PassengerCapacity { get; set; }
-
-        public ICollection<Flight> FlightsNavigation { get; set; } = new List<Flight>();  
-
+        public ICollection<Flight> FlightsNavigation { get; set; } = new List<Flight>();
     }
 }

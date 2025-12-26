@@ -11,5 +11,6 @@ namespace AirLineMetrics.Domain.Entities
         public int BaggageTypeId { get; set; }
         public string BaggageName { get; set; } = string.Empty;
         public ICollection<BaggageReservation> BaggageNavigation { get; set; } = new List<BaggageReservation>();
+
     }
 }

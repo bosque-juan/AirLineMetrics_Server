@@ -14,7 +14,6 @@ namespace AirLineMetrics.Domain.Entities
         public Country CountryNavigation { get; set; } = new Country();
         public ICollection<Passenger> PassengersNavigation { get; set; } = new List<Passenger>();
         public ICollection<Flight> FlightNavigation { get; set; } = new List<Flight>();
-
         public ICollection<Airport> AiportsNavigation { get; set; } = new List<Airport>();
     }
 }

@@ -14,7 +14,6 @@ namespace AirLineMetrics.Domain.Entities
         public decimal Price { get; set; }
         public string Description { get; set; } = string.Empty;
         public bool IsCancelled { get; set; }
-
         public int PassengerId { get; set; }
         public int FlightId { get; set; }
 
