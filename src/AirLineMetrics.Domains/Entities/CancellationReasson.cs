@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirLineMetrics.Domain.Models
+namespace AirLineMetrics.Domain.Entities
 {
     public class CancellationReasson
     {
         public int CancellationReassonId { get; set; }
-        public string CancellationDescription {  get; set; }
+        public string Description { get; set; } = string.Empty;
+        public ICollection<PurchaseCancellation> PurchaseCancellationNavigation { get; set; } = new List<PurchaseCancellation>();
     }
 }
