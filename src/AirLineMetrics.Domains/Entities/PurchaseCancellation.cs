@@ -8,7 +8,7 @@
         public int SatisfactionEstimated { get; set; }       
         public int CancellationReasonId { get; set; }
         public int InvoiceDetailId { get; set; }
-        public CancellationReasson CancellationReassonNavigation { get; set; } = null!;
+        public CancellationReason CancellationReassonNavigation { get; set; } = null!;
         public InvoiceDetail InvoiceDetailNavigation { get; set; } = null!;
     }
 }

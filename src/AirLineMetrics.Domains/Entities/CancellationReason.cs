@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirLineMetrics.Domain.Entities
 {
-    public class CancellationReasson
+    public class CancellationReason
     {
         public int CancellationReassonId { get; set; }
         public string Description { get; set; } = string.Empty;
