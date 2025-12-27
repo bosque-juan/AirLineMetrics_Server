@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using AirLineMetrics.Domain.Models;
+using AirLineMetrics.Domain.Entities;
 
 namespace AirLineMetrics.Infrastructure.Persistence.Configurations
 {
@@ -25,6 +25,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .IsRequired()
                 .HasMaxLength(40)
                 .HasColumnName("COUNTRY_NAME");
+
+            builder.HasMany(c => c.StateNavigation)
+                    .WithOne(s => s.CountryNavigation)
+                    .HasForeignKey(s => s.CountryId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
         }
     }

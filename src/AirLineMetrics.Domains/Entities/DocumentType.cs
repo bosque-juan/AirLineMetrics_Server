@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AirLineMetrics.Domain.Models;
+using AirLineMetrics.Domain.Entities;
 
-namespace AirLIneDbContext.Models
+namespace AirLineMetrics.Domain.Entities
 {
     public class DocumentType
     {
         public int DocumentTypeId { get; set; }
+        public string DocumentTypeName { get; set; } = string.Empty;
 
-        public string DocumentTypeName { get; set; }
-
-        public virtual ICollection<Passenger> passengers {get;set;} = new List<Passenger>();
+        public virtual ICollection<Passenger> PassengerNavigation { get; set; } = new List<Passenger>();
     }
 }

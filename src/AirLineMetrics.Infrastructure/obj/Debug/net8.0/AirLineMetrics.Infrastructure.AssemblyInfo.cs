@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirLineMetrics.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1eec103368e326034f5ac1c14b9014b211f228e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fd272a51a88b18c04ebeef830dc448cfac8129c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirLineMetrics.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirLineMetrics.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

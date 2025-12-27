@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirLineMetrics.Domain.Models
+namespace AirLineMetrics.Domain.Entities
 {
     public class BaggageType
     {
         public int BaggageTypeId { get; set; }
-        public string BaggageName { get; set; }
+        public string BaggageName { get; set; } = string.Empty;
+        public ICollection<BaggageReservation> BaggageReservationNavigation { get; set; } = new List<BaggageReservation>();
+
     }
 }

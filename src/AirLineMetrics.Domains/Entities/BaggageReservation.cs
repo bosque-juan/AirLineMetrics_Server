@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace AirLineMetrics.Domain.Entities
 {
-    public class InvoiceDetail
+    public class BaggageReservation
     {
-        public int InvoiceDetailId { get; set; }
+        public int BaggageId { get; set; }
         public decimal Price { get; set; }
-        public int InvoiceId { get; set; }
+        public decimal Weight { get; set; }
+        public int BaggageTypeId { get; set; }
         public int FlightDetailId { get; set; }
-        public Invoice InvoiceNavigation { get; set; } = null!;
+        public BaggageType BaggageTypeNavigation { get; set; } = null!;
         public FlightDetail FlightDetailNavigation { get; set; } = null!;
-        public ICollection<PurchaseCancellation> PurchaseCancellationNavigation { get; set; } = new List<PurchaseCancellation>();
 
     }
 }

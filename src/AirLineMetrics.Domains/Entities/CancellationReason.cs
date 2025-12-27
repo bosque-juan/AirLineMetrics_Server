@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AirLineMetrics.Domain.Entities
 {
-    public class PassengerType
+    public class CancellationReason
     {
-        public int PassengerTypeId { get; set; }
+        public int CancellationReasonId { get; set; }
         public string Description { get; set; } = string.Empty;
-        public ICollection<Passenger> PassengersNavigation { get; set; } = null!;
+        public ICollection<PurchaseCancellation> PurchaseCancellationNavigation { get; set; } = new List<PurchaseCancellation>();
 
     }
 }
