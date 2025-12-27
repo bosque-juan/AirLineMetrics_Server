@@ -15,7 +15,6 @@ namespace AirLineMetrics.Domain.Entities
         public Invoice InvoiceNavigation { get; set; } = null!;
         public FlightDetail FlightDetailNavigation { get; set; } = null!;
         public ICollection<PurchaseCancellation> PurchaseCancellationNavigation { get; set; } = new List<PurchaseCancellation>();
-        public ICollection<InvoiceDetail> InvoiceDetailNavigation { get; set; } = new List<InvoiceDetail>();
 
     }
 }

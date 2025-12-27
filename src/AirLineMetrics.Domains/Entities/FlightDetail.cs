@@ -20,7 +20,7 @@ namespace AirLineMetrics.Domain.Entities
         public Passenger PassengerNavigation { get; set; } = null!;
         public Flight FlightNavigation { get; set; } = null!;
         public ICollection<SeatReservation> SeatReservationNavigation { get; set; } = new List<SeatReservation>();
-        public ICollection<BaggageReservation> BaggageNavigation { get; set; } = new List<BaggageReservation>();
+        public ICollection<BaggageReservation> BaggageReservationNavigation { get; set; } = new List<BaggageReservation>();
         public ICollection<InvoiceDetail> InvoiceDetailNavigation { get; set; } = new List<InvoiceDetail>();
 
     }
