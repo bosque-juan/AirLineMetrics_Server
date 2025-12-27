@@ -1,0 +1,11 @@
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\bin\Debug\net8.0\AirLIneMetrics.Application.deps.json
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\bin\Debug\net8.0\AirLIneMetrics.Application.dll
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\bin\Debug\net8.0\AirLIneMetrics.Application.pdb
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\AirLIneMetrics.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\AirLIneMetrics.Application.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\AirLIneMetrics.Application.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\AirLIneMetrics.Application.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\AirLIneMetrics.Application.dll
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\refint\AirLIneMetrics.Application.dll
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\AirLIneMetrics.Application.pdb
+C:\Users\Usuario\Desktop\onGit\AirLineMetrics\AirLineMetrics_Server\src\AirLIneMetrics.Application\obj\Debug\net8.0\ref\AirLIneMetrics.Application.dll
