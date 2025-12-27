@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirLIneMetrics.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fd272a51a88b18c04ebeef830dc448cfac8129c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c66994dcbe01956dacd6b714e406b98f7c83eea0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirLIneMetrics.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirLIneMetrics.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
