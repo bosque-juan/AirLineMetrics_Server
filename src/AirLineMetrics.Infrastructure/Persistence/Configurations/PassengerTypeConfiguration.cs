@@ -26,6 +26,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasMaxLength(100)
                 .HasColumnName("DESCRIPTION");
 
+            builder.HasMany(pt => pt.PassengersNavigation)
+                .WithOne(p => p.PassengerTypeNavigation)
+                .HasForeignKey(p => p.PassengerTypeId)
+                .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

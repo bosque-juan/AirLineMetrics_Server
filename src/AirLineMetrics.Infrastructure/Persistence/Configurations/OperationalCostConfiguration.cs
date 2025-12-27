@@ -23,16 +23,20 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasColumnName("OPERATIONAL_COST_ID");
 
             builder.Property(oc => oc.FuelCost)
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("FUEL_COST");
 
             builder.Property(oc => oc.MaintenanceCost)
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("MAINTENANCE_COST");
 
 
             builder.Property(oc => oc.CrewCost)
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("CREW_COST");
 
             builder.Property(oc => oc.AirportFees)
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("AIRPORT_FEES");
 
             builder.Property(oc => oc.OperationalDate)
@@ -46,6 +50,7 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasForeignKey(oc => oc.FlightId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_OPERATIONAL_COSTS_FLIGHTS");
+
         }
     }
 }

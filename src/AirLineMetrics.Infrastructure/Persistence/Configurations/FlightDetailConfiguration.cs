@@ -25,6 +25,7 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
 
             builder.Property(fd => fd.Price)
                 .IsRequired()
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("PRICE");
 
 
@@ -47,13 +48,28 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
 
             builder.HasOne(fd => fd.PassengerNavigation).WithMany(p => p.FlightDetailsNavigation)
                     .HasForeignKey(fp => fp.PassengerId)
-                    .OnDelete(DeleteBehavior.Cascade)
+                    .OnDelete(DeleteBehavior.NoAction)
                     .HasConstraintName("FK_FLIGHT_DETAILS_PASSENGERS");
 
             builder.HasOne(fd => fd.FlightNavigation).WithMany(p => p.FlightDetailsNavigation)
               .HasForeignKey(fd => fd.FlightId)
-              .OnDelete(DeleteBehavior.Cascade)
+              .OnDelete(DeleteBehavior.NoAction)
               .HasConstraintName("FK_FLIGHT_DETAILS_FLIGTHS");
+
+            builder.HasMany(fd => fd.SeatReservationNavigation)
+               .WithOne(sr => sr.FlightDetailNavigation)
+               .HasForeignKey(sr => sr.FlighDetailtId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(fd => fd.BaggageReservationNavigation)
+               .WithOne(br => br.FlightDetailNavigation)
+               .HasForeignKey(br => br.FlightDetailId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(fd => fd.InvoiceDetailNavigation)
+            .WithOne(id => id.FlightDetailNavigation)
+            .HasForeignKey(id => id.FlightDetailId)
+            .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

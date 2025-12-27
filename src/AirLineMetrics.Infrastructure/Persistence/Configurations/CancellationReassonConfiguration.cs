@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace AirLineMetrics.Infrastructure.Persistence.Configurations
 {
-    internal class CancellationReassonConfiguration : IEntityTypeConfiguration<CancellationReasson>
+    internal class CancellationReassonConfiguration : IEntityTypeConfiguration<CancellationReason>
     {
-        public void Configure(EntityTypeBuilder<CancellationReasson> builder)
+        public void Configure(EntityTypeBuilder<CancellationReason> builder)
         {
-            builder.HasKey(cr => cr.CancellationReassonId);
+            builder.HasKey(cr => cr.CancellationReasonId);
 
             builder.ToTable("CANCELLATION_REASSONS");
 
-            builder.Property(cr => cr.CancellationReassonId)
+            builder.Property(cr => cr.CancellationReasonId)
                 .UseIdentityColumn()
                 .ValueGeneratedOnAdd()
                 .HasColumnName("CANCELLATION_REASSON_ID");
@@ -25,6 +25,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
             builder.Property(cr => cr.Description)
                 .HasMaxLength(100)
                 .HasColumnName("Description");
+
+            builder.HasMany(cr => cr.PurchaseCancellationNavigation)
+                .WithOne(pc => pc.CancellationReasonNavigation)
+                .HasForeignKey(pc => pc.CancellationReasonId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 

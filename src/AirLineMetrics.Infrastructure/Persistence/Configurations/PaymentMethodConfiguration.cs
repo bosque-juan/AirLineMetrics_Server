@@ -25,6 +25,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
             builder.Property(pm => pm.PaymentMethodName)
                 .IsRequired()
                 .HasColumnName("NAME");
+
+            builder.HasMany(pm => pm.InvoicePaymentNavigation)
+                .WithOne(ip => ip.PaymentMethodNavigation)
+                .HasForeignKey(ip => ip.PaymentMethodId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

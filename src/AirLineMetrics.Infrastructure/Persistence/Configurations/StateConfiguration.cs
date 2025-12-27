@@ -28,13 +28,28 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasColumnName("STATE_NAME");
 
             builder.Property(s => s.CountryId)
-                .HasDefaultValue(1)
+                .IsRequired()
                 .HasColumnName("COUNTRY_ID");
 
             builder.HasOne(s => s.CountryNavigation).WithMany(c => c.StateNavigation)
                 .HasForeignKey(s => s.CountryId)
-                .OnDelete(DeleteBehavior.SetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_STATES_COUNTRIES");
+
+            builder.HasMany(s => s.PassengersNavigation)
+                .WithOne(p => p.StateNavigation)
+                .HasForeignKey(p => p.StateId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(s => s.FlightNavigation)
+                .WithOne(f => f.StateNavigation)
+                .HasForeignKey(f => f.StateId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(s => s.AiportsNavigation)
+                .WithOne(a => a.StateNavigation)
+                .HasForeignKey(a => a.StateId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

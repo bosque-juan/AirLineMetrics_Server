@@ -49,6 +49,5 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_SEAT_RESERVATIONS_SEAT_TYPES");
         }
-
     }
 }
