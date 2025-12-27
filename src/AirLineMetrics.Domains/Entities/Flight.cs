@@ -23,12 +23,10 @@ namespace AirLineMetrics.Domain.Entities
         public AirCraft AirCraftNavigation { get; set; } = null!;
         public Airport OriginAirportNavigation { get; set; } = null!;
         public Airport DestinationAirportNavigation { get; set; } = null!;
-
         public State StateNavigation { get; set; } = null!;
+        
         public ICollection<FlightDetail> FlightDetailsNavigation { get; set; } = null!;
-
         public ICollection<OperationalCost> OperationalCostsNavigation { get; set; } = new HashSet<OperationalCost>();
         public ICollection<FlightPromotion> FlightPromotionsNavigation { get; set; } = null!;
-
     }
 }

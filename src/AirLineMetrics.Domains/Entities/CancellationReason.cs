@@ -8,7 +8,7 @@ namespace AirLineMetrics.Domain.Entities
 {
     public class CancellationReason
     {
-        public int CancellationReassonId { get; set; }
+        public int CancellationReasonId { get; set; }
         public string Description { get; set; } = string.Empty;
         public ICollection<PurchaseCancellation> PurchaseCancellationNavigation { get; set; } = new List<PurchaseCancellation>();
 
