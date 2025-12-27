@@ -24,25 +24,23 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasColumnName("FLIGHT_PROMOTION_ID");
 
             builder.Property(fp => fp.PromotionId)
-              .UseIdentityColumn()
-              .ValueGeneratedOnAdd()
-              .HasColumnName("PROMOTION_ID");
+                .IsRequired()
+                .HasColumnName("PROMOTION_ID");
 
             builder.Property(fp => fp.FlightId)
-             .UseIdentityColumn()
-             .ValueGeneratedOnAdd()
-             .HasColumnName("FLIGHT_ID");
+                .IsRequired()
+                .HasColumnName("FLIGHT_ID");
 
             builder.HasOne(fp => fp.PromotionNavigation).WithMany(p => p.FlightPromotionsNavigation)
-                    .HasForeignKey(fp => fp.PromotionId)
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK_FLIGHT_PROMOTIONS_PROMOTIONS");
+                .HasForeignKey(fp => fp.PromotionId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_FLIGHT_PROMOTIONS_PROMOTIONS");
 
 
             builder.HasOne(fp => fp.FlightNavigation).WithMany(f => f.FlightPromotionsNavigation)
-                    .HasForeignKey(fp => fp.FlightId)
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK_FLIGHTS_PROMOTIONS_FLIGHTS");
+                .HasForeignKey(fp => fp.FlightId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_FLIGHTS_PROMOTIONS_FLIGHTS");
         }
     }
 }

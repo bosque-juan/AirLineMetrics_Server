@@ -1,4 +1,4 @@
-﻿using AirLIneDbContext.Entities;
+﻿using AirLineMetrics.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -26,6 +26,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasMaxLength(50)
                 .IsRequired()
                 .HasColumnName("DESCRIPTION");
+
+            builder.HasMany(dt => dt.PassengerNavigation)
+                .WithOne(p => p.DocumentTypeNavigation)
+                .HasForeignKey(p => p.DocumentTypeId)
+                .OnDelete(DeleteBehavior.Cascade);
 
         }
     }

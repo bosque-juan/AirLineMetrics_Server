@@ -13,7 +13,7 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Airport> builder)
         {
-            builder.HasKey(a=>a.AirportId);
+            builder.HasKey(a => a.AirportId);
 
             builder.ToTable("AIRPORTS");
 
@@ -36,6 +36,16 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasForeignKey(a => a.StateId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_AIRPORTS_STATES");
+
+            builder.HasMany(a => a.OriginFlightNavigation)
+                .WithOne(f => f.OriginAirportNavigation)
+                .HasForeignKey(f => f.OriginAirportId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(a => a.DestinationFlightNavigation)
+                .WithOne(f => f.DestinationAirportNavigation)
+                .HasForeignKey(f => f.DestinationAirportId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

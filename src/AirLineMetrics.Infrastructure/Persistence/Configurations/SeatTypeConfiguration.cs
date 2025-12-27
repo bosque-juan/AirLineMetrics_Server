@@ -11,7 +11,7 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
 {
     internal class SeatTypeConfiguration : IEntityTypeConfiguration<SeatType>
     {
-       public void Configure(EntityTypeBuilder<SeatType> builder)
+        public void Configure(EntityTypeBuilder<SeatType> builder)
         {
             builder.ToTable("SEAT_TYPES");
 
@@ -34,6 +34,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
             builder.Property(st => st.AddedSeatTypePrice)
                 .IsRequired()
                 .HasColumnName("ADDED_SEAT_TYPE_PRICE");
+
+            builder.HasMany(st => st.SeatReservationNavigation)
+                .WithOne(sr => sr.SeatTypeNavigation)
+                .HasForeignKey(sr => sr.SeatTypeId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

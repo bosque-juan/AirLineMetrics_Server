@@ -34,6 +34,16 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .HasForeignKey(i => i.PassengerId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_INVOICES_PASSENGERS");
+
+            builder.HasMany(i => i.InvoicePaymentNavigation)
+                .WithOne(ip => ip.InvoiceNavigation)
+                .HasForeignKey(ip => ip.InvoiceId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(i => i.InvoiceDetailNavigation)
+             .WithOne(id => id.InvoiceNavigation)
+             .HasForeignKey(id => id.InvoiceId)
+             .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

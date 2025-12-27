@@ -66,7 +66,7 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_PASSENGERS_DOCUMENT_TYPES");
 
-            builder.HasOne(p => p.PassengerTypeNavigation).WithMany(pt => pt.PassengerNavigation)
+            builder.HasOne(p => p.PassengerTypeNavigation).WithMany(pt => pt.PassengersNavigation)
                 .HasForeignKey(p => p.PassengerTypeId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_PASSENGERS_PASSENGER_TYPES");
@@ -76,8 +76,16 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_PASSENGERS_STATES");
 
+            builder.HasMany(p => p.InvoiceNavigation)
+                .WithOne(i => i.PassengerNavigation)
+                .HasForeignKey(i => i.PassengerId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
+            builder.HasMany(p => p.FlightDetailsNavigation)
+                .WithOne(fd => fd.PassengerNavigation)
+                .HasForeignKey(fd => fd.PassengerId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
-
-
     }
 }

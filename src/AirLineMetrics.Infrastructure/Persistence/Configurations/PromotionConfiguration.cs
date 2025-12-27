@@ -34,6 +34,12 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
 
             builder.Property(p => p.PromotionDiscount)
                 .HasColumnName("PROMOTION_DISCOUNT");
+
+            builder.HasMany(p => p.FlightPromotionsNavigation)
+                .WithOne(fp => fp.PromotionNavigation)
+                .HasForeignKey(p => p.PromotionId)
+                .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

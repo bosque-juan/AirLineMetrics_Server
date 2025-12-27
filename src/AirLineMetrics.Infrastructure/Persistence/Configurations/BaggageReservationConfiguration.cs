@@ -24,9 +24,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
 
             builder.Property(b => b.Price)
                 .IsRequired()
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("PRICE");
 
             builder.Property(b => b.Weight)
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("WEIGHT");
 
             builder.Property(b => b.BaggageTypeId)
@@ -37,15 +39,15 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .IsRequired()
                 .HasColumnName("FLIGHT_DETAIL_ID");
 
-            builder.HasOne(b => b.BaggageTypeNavigation).WithMany(bt => bt.BaggageNavigation)
+            builder.HasOne(b => b.BaggageTypeNavigation).WithMany(bt => bt.BaggageReservationNavigation)
                 .HasForeignKey(bt => bt.BaggageTypeId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_BAGGAGE_BAGGAGE_TYPE");
 
-            builder.HasOne(b => b.FlightDetailNavigation).WithMany(fd => fd.BaggageNavigation)
-           .HasForeignKey(bt => bt.BaggageTypeId)
-           .OnDelete(DeleteBehavior.Cascade)
-           .HasConstraintName("FK_BAGGAGE_FLIGHT_DETAILS");
+            builder.HasOne(b => b.FlightDetailNavigation).WithMany(fd => fd.BaggageReservationNavigation)
+               .HasForeignKey(bt => bt.BaggageTypeId)
+               .OnDelete(DeleteBehavior.Cascade)
+               .HasConstraintName("FK_BAGGAGE_FLIGHT_DETAILS");
         }
     }
 }

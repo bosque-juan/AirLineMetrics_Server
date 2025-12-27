@@ -31,6 +31,11 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .IsRequired()
                 .HasColumnName("CAPACITY");
 
+            builder.HasMany(a => a.FlightsNavigation)
+                .WithOne(f => f.AirCraftNavigation)
+                .HasForeignKey(f => f.AirCraftId)
+                .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

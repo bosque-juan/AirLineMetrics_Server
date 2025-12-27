@@ -22,6 +22,7 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                     .HasColumnName("CANCELLATION_ID");
 
             builder.Property(c => c.RefundAmount)
+                .HasColumnType("decimal(10,2)")
                 .HasColumnName("REFOUND_AMOUNT");
 
             builder.Property(c => c.CancellationDate)
@@ -43,7 +44,7 @@ namespace AirLineMetrics.Infrastructure.Persistence.Configurations
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_PURCHASE_CANCELLATIONS_INVOICE_DETAILS");
 
-            builder.HasOne(pc => pc.CancellationReassonNavigation).WithMany(cr => cr.PurchaseCancellationNavigation)
+            builder.HasOne(pc => pc.CancellationReasonNavigation).WithMany(cr => cr.PurchaseCancellationNavigation)
                 .HasForeignKey(pc => pc.CancellationReasonId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_PURCHASE_CANCELLATIONS_CANCELLATION_REASONS");
